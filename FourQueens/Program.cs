@@ -10,39 +10,31 @@ namespace FourQueens
 
         static void Main(string[] args)
         {
-            bool queenWasPlaced;
-
-            for (n = 2; n < 10; n++)
+            for (n = 2; n < 9; n++)
             {
                 Console.WriteLine();
-                Console.WriteLine($"n:{n}");
-                
+                Console.WriteLine($"# n:{n}");
+
                 chessBoard = new int[n, n];
 
                 InitializeChessBoard();
 
-                queenWasPlaced = PlaceQueen(1);
-                Console.WriteLine($"Queen {1} was placed: {queenWasPlaced}");
-
-                queenWasPlaced = PlaceQueen(2);
-                Console.WriteLine($"Queen {2} was placed: {queenWasPlaced}");
-
-                queenWasPlaced = PlaceQueen(3);
-                Console.WriteLine($"Queen {3} was placed: {queenWasPlaced}");
-
-                queenWasPlaced = PlaceQueen(4);
-                Console.WriteLine($"Queen {4} was placed: {queenWasPlaced}");
-
+                bool allQueensPlaced = PlaceQueen(4);
+                Console.WriteLine($"## All Queens were placed: {allQueensPlaced}");
+                
                 Console.WriteLine();
-                Console.WriteLine($"Chessboard:");
+                Console.WriteLine($"## Chessboard:");
                 DisplayChessBoard();
-                Console.WriteLine("-------------------------------------------------");
+                DisplayChessBoard();
             }
         }
 
-        private static bool PlaceQueen(int queen)
+        private static bool PlaceQueen(int curentQueenToPlace)
         {
-            bool queenWasSuccessfullyPlaced = false;
+            if (curentQueenToPlace == 0)
+            {
+                return true; // No more queens to place
+            }
 
             for (int row = 0; row < n; row++)
             {
@@ -54,14 +46,22 @@ namespace FourQueens
 
                     if (!isPositionOccupied && isPositionClear)
                     {
-                        chessBoard[row, column] = queen;
-                        queenWasSuccessfullyPlaced = true;
-                        return true;
+                        chessBoard[row, column] = curentQueenToPlace;
+
+                        if (PlaceQueen(curentQueenToPlace - 1))
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            // Remove current queen
+                            chessBoard[row, column] = 0;                            
+                        }                        
                     }
                 }
             }
 
-            return queenWasSuccessfullyPlaced;
+            return false;
         }
 
         private static bool IsPositionOccupied(int row, int column)
