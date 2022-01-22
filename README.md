@@ -439,7 +439,3 @@
 [7,5] : 0
 [7,6] : 0
 [7,7] : 0
-
-C:\Users\Gabor\source\repos\FourQueens\FourQueens\bin\Debug\net6.0\FourQueens.exe (process 20384) exited with code 0.
-To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
-Press any key to close this window . . .
