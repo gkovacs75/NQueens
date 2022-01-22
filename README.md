@@ -1,26 +1,30 @@
 # Four Queens Output
 
 
-n:2
-Queen 1 was placed: True
-Queen 2 was placed: False
-Queen 3 was placed: False
-Queen 4 was placed: False
+## n:2
 
-Chessboard:
+- Queen 1 was placed: True
+- Queen 2 was placed: False
+- Queen 3 was placed: False
+- Queen 4 was placed: False
+
+### Chessboard:
+
 [0,0] : 1
 [0,1] : 0
 [1,0] : 0
 [1,1] : 0
+
 -------------------------------------------------
 
-n:3
-Queen 1 was placed: True
-Queen 2 was placed: True
-Queen 3 was placed: False
-Queen 4 was placed: False
+## n:3
+- Queen 1 was placed: True
+- Queen 2 was placed: True
+- Queen 3 was placed: False
+- Queen 4 was placed: False
 
-Chessboard:
+### Chessboard:
+
 [0,0] : 1
 [0,1] : 0
 [0,2] : 0
@@ -30,15 +34,18 @@ Chessboard:
 [2,0] : 0
 [2,1] : 0
 [2,2] : 0
+
 -------------------------------------------------
 
-n:4
-Queen 1 was placed: True
-Queen 2 was placed: True
-Queen 3 was placed: True
-Queen 4 was placed: False
+## n:4
 
-Chessboard:
+- Queen 1 was placed: True
+- Queen 2 was placed: True
+- Queen 3 was placed: True
+- Queen 4 was placed: False
+
+### Chessboard:
+
 [0,0] : 1
 [0,1] : 0
 [0,2] : 0
@@ -55,15 +62,17 @@ Chessboard:
 [3,1] : 3
 [3,2] : 0
 [3,3] : 0
+
 -------------------------------------------------
 
-n:5
-Queen 1 was placed: True
-Queen 2 was placed: True
-Queen 3 was placed: True
-Queen 4 was placed: True
+## n:5
+- Queen 1 was placed: True
+- Queen 2 was placed: True
+- Queen 3 was placed: True
+- Queen 4 was placed: True
 
-Chessboard:
+### Chessboard:
+
 [0,0] : 1
 [0,1] : 0
 [0,2] : 0
@@ -89,15 +98,17 @@ Chessboard:
 [4,2] : 0
 [4,3] : 0
 [4,4] : 0
+
 -------------------------------------------------
 
-n:6
-Queen 1 was placed: True
-Queen 2 was placed: True
-Queen 3 was placed: True
-Queen 4 was placed: True
+## n:6
+- Queen 1 was placed: True
+- Queen 2 was placed: True
+- Queen 3 was placed: True
+- Queen 4 was placed: True
 
-Chessboard:
+### Chessboard:
+
 [0,0] : 1
 [0,1] : 0
 [0,2] : 0
@@ -134,15 +145,18 @@ Chessboard:
 [5,3] : 0
 [5,4] : 0
 [5,5] : 0
+
 -------------------------------------------------
 
-n:7
-Queen 1 was placed: True
-Queen 2 was placed: True
-Queen 3 was placed: True
-Queen 4 was placed: True
+## n:7
 
-Chessboard:
+- Queen 1 was placed: True
+- Queen 2 was placed: True
+- Queen 3 was placed: True
+- Queen 4 was placed: True
+
+###Chessboard:
+
 [0,0] : 1
 [0,1] : 0
 [0,2] : 0
@@ -192,15 +206,18 @@ Chessboard:
 [6,4] : 0
 [6,5] : 0
 [6,6] : 0
+
 -------------------------------------------------
 
-n:8
-Queen 1 was placed: True
-Queen 2 was placed: True
-Queen 3 was placed: True
-Queen 4 was placed: True
+## n:8
 
-Chessboard:
+- Queen 1 was placed: True
+- Queen 2 was placed: True
+- Queen 3 was placed: True
+- Queen 4 was placed: True
+
+###Chessboard:
+
 [0,0] : 1
 [0,1] : 0
 [0,2] : 0
@@ -265,15 +282,18 @@ Chessboard:
 [7,5] : 0
 [7,6] : 0
 [7,7] : 0
+
 -------------------------------------------------
 
-n:9
-Queen 1 was placed: True
-Queen 2 was placed: True
-Queen 3 was placed: True
-Queen 4 was placed: True
+## n:9
 
-Chessboard:
+- Queen 1 was placed: True
+- Queen 2 was placed: True
+- Queen 3 was placed: True
+- Queen 4 was placed: True
+
+### Chessboard:
+
 [0,0] : 1
 [0,1] : 0
 [0,2] : 0
