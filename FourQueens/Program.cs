@@ -10,7 +10,7 @@ namespace FourQueens
 
         static void Main(string[] args)
         {
-            for (n = 2; n < 9; n++)
+            for (n = 2; n < 10; n++)
             {
                 Console.WriteLine();
                 Console.WriteLine($"# n:{n}");
@@ -21,10 +21,10 @@ namespace FourQueens
 
                 bool allQueensPlaced = PlaceQueen(4);
                 Console.WriteLine($"## All Queens were placed: {allQueensPlaced}");
-                
+
                 Console.WriteLine();
                 Console.WriteLine($"## Chessboard:");
-                DisplayChessBoard();
+
                 DisplayChessBoard();
             }
         }
@@ -42,7 +42,7 @@ namespace FourQueens
                 {
                     bool isPositionOccupied = IsPositionOccupied(row, column);
 
-                    bool isPositionClear = IsPositionClear(row, column);
+                    bool isPositionClear = IsPositionSafe(row, column);
 
                     if (!isPositionOccupied && isPositionClear)
                     {
@@ -55,8 +55,8 @@ namespace FourQueens
                         else
                         {
                             // Remove current queen
-                            chessBoard[row, column] = 0;                            
-                        }                        
+                            chessBoard[row, column] = 0;
+                        }
                     }
                 }
             }
@@ -69,7 +69,7 @@ namespace FourQueens
             return chessBoard[row, column] > 0;
         }
 
-        private static bool IsPositionClear(int row, int column)
+        private static bool IsPositionSafe(int row, int column)
         {
             // 1. Is there already a queen on this row?
             for (int c = 0; c < n; c++)
@@ -197,12 +197,54 @@ namespace FourQueens
 
         private static void DisplayChessBoard()
         {
+            for (int column = 0; column < n; column++)
+            {
+                Console.Write($"{column}");
+
+                if (column < (n - 1))
+                {
+                    Console.Write($" | ");
+                }
+            }
+
+            Console.WriteLine();
+
+            for (int column = 0; column < n; column++)
+            {
+                Console.Write($":---:");
+
+                if (column < (n - 1))
+                {
+                    Console.Write($" | ");
+                }
+            }
+
+            Console.WriteLine();
+
+            string q;
+
             for (int row = 0; row < n; row++)
             {
                 for (int column = 0; column < n; column++)
                 {
-                    Console.WriteLine($"[{row},{column}] : {chessBoard[row, column]}");
+                    if (chessBoard[row, column] > 0)
+                    {
+                        q = $"Q{chessBoard[row, column]}";
+                    }
+                    else
+                    {
+                        q = "";
+                    }
+
+                    Console.Write($" [{row},{column}]:{q} ");
+
+                    if (column < (n - 1))
+                    {
+                        Console.Write($" | ");
+                    }
                 }
+
+                Console.WriteLine();
             }
 
         }
