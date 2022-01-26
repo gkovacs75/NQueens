@@ -19,7 +19,7 @@ namespace FourQueens
 
                 InitializeChessBoard();
 
-                bool allQueensPlaced = PlaceQueen(4);
+                bool allQueensPlaced = PlaceQueen(n);
                 Console.WriteLine($"## All Queens were placed: {allQueensPlaced}");
 
                 Console.WriteLine();
